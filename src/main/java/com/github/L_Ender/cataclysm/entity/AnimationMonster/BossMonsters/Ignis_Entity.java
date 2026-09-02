@@ -323,7 +323,7 @@ public class Ignis_Entity extends LLibrary_Boss_Monster implements IHoldEntity {
             if (!(source.getEntity() instanceof Ignis_Entity)) {
                 if (source.is(DamageTypeTags.IS_PROJECTILE)) {
                     if (this.getShieldDurability() < 3) {
-                        this.playSound(ModSounds.IGNIS_ARMOR_BREAK.get(), 1.0F, 0.8F);
+                        this.playSound(ModSounds.IGNIS_SHIELD_BREAK.get(), 1.0F, 0.8F);
                         if (!level().isClientSide) {
                             this.setShieldDurability(this.getShieldDurability() + 1);
                         }
@@ -2418,7 +2418,7 @@ public class Ignis_Entity extends LLibrary_Boss_Monster implements IHoldEntity {
                 if (!prev) {
                     worldData.setIgnisDefeatedOnce(true);
                     if (level() instanceof ServerLevel serverLevel) {
-                        serverLevel.getPlayers(EntitySelector.NO_SPECTATORS).forEach(serverPlayer -> serverPlayer.displayClientMessage(Component.translatable("entity.cataclysm.ignis.defeat_message").withStyle(ChatFormatting.GOLD), true));
+                        serverLevel.getPlayers(EntitySelector.NO_SPECTATORS).forEach(serverPlayer -> serverPlayer.displayClientMessage(Component.translatable("misc.cataclysm.ignis_defeat").withStyle(ChatFormatting.GOLD), true));
                     }
                 }
             }

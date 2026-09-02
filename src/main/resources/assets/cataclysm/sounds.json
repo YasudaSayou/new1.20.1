@@ -1,4 +1,13 @@
 {
+  "explosion": {
+    "subtitle": "subtitles.entity.generic.explode",
+    "sounds": [
+      "random/explode1",
+      "random/explode2",
+      "random/explode3",
+      "random/explode4"
+    ]
+  },
   "golemhurt": {
     "subtitle": "golemhurt.sub",
     "sounds": [
@@ -139,7 +148,7 @@
     ]
   },
   "axe_swing": {
-    "subtitle": "axeswingattack.sub",
+    "subtitle": "axe_swing.sub",
     "sounds": [
       {
         "name": "cataclysm:entity/axe_swing1"
@@ -172,7 +181,7 @@
       }
     ]
   },
-  "ignis_shield_break": {
+  "ignisshieldbreak": {
     "subtitle": "ignisshieldbreak.sub",
     "sounds": [
       {
@@ -1624,7 +1633,7 @@
     ]
   },
   "scylla_roar": {
-    "subtitle": "scylla_death.sub",
+    "subtitle": "scylla_roar.sub",
     "sounds": [
       {
         "name": "cataclysm:entity/scylla_roar"
@@ -1672,23 +1681,6 @@
         "name": "cataclysm:entity/super_lightning_strike",
         "volume": 1.0,
         "pitch": 1.0
-      }
-    ]
-  },
-  "explosion": {
-    "subtitle": "explosion.sub",
-    "sounds": [
-      {
-        "name": "cataclysm:entity/explosion_1"
-      },
-      {
-        "name": "cataclysm:entity/explosion_2"
-      },
-      {
-        "name": "cataclysm:entity/explosion_3"
-      },
-      {
-        "name": "cataclysm:entity/explosion_4"
       }
     ]
   },

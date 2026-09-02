@@ -94,7 +94,7 @@ public class Cursed_Tombstone_Block extends BaseEntityBlock {
                 return ItemInteractionResult.SUCCESS;
             }
         }else{
-            player.displayClientMessage(Component.translatable("block.cataclysm.cursed_tombstone.message"), true);
+            player.displayClientMessage(Component.translatable("misc.cataclysm.cursed_tombstone"), true);
             return ItemInteractionResult.FAIL;
         }
         return ItemInteractionResult.FAIL;

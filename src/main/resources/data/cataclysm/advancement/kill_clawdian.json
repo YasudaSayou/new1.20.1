@@ -10,7 +10,7 @@
       "translate": "advancements.cataclysm.kill_clawdian.description"
     }
   },
-  "parent": "cataclysm:root",
+  "parent": "cataclysm:find_acropolis",
   "criteria": {
     "endergolem": {
       "trigger": "minecraft:player_killed_entity",

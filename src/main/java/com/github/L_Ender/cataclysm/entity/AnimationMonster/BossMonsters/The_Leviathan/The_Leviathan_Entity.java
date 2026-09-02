@@ -320,7 +320,7 @@ public class The_Leviathan_Entity extends LLibrary_Boss_Monster implements ISemi
         if (!flag1) {
             if(!source.is(DamageTypeTags.BYPASSES_INVULNERABILITY) &&  CMCommonConfig.Leviathan.ImmuneOutofWater) {
                 if (entity instanceof Player player) {
-                    player.displayClientMessage(Component.translatable("entity.cataclysm.the_leviathan_immune"), true);
+                    player.displayClientMessage(Component.translatable("misc.cataclysm.the_leviathan_immune"), true);
                 }
                 return false;
             }
@@ -930,7 +930,7 @@ public class The_Leviathan_Entity extends LLibrary_Boss_Monster implements ISemi
                 if (!prev) {
                     worldData.setLeviathanDefeatedOnce(true);
                     if (level() instanceof ServerLevel serverLevel) {
-                        serverLevel.getPlayers(EntitySelector.NO_SPECTATORS).forEach(serverPlayer -> serverPlayer.displayClientMessage(Component.translatable("entity.cataclysm.the_leviathan.defeat_message").withStyle(ChatFormatting.DARK_PURPLE), true));
+                        serverLevel.getPlayers(EntitySelector.NO_SPECTATORS).forEach(serverPlayer -> serverPlayer.displayClientMessage(Component.translatable("misc.cataclysm.the_leviathan_defeat").withStyle(ChatFormatting.DARK_PURPLE), true));
                     }
                 }
             }

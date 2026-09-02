@@ -3,6 +3,7 @@ package com.github.L_Ender.cataclysm.items;
 
 import com.github.L_Ender.cataclysm.config.CMCommonConfig;
 import com.github.L_Ender.cataclysm.entity.effect.Sandstorm_Entity;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
@@ -58,6 +59,6 @@ public class Sandstorm_In_A_Bottle extends Item {
 
 	@Override
 	public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flags) {
-		//tooltip.add(Component.translatable("item.cataclysm.sandstorm_in_a_bottle.desc", ModKeybind.KEY_ABILITY.getTranslatedKeyMessage()).withStyle(ChatFormatting.DARK_GREEN));
+		tooltip.add(Component.translatable("item.cataclysm.sandstorm_in_a_bottle.desc").withStyle(ChatFormatting.DARK_GREEN));
 	}
 }

@@ -38,7 +38,7 @@ import javax.annotation.Nullable;
 
 public class Mechanical_fusion_Anvil extends BaseEntityBlock {
     public static final MapCodec<Mechanical_fusion_Anvil> CODEC = simpleCodec(Mechanical_fusion_Anvil::new);
-    private static final Component CONTAINER_TITLE = Component.translatable("cataclysm.container.weapon_fusion");
+    private static final Component CONTAINER_TITLE = Component.translatable("container.cataclysm.weapon_fusion");
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     private static final VoxelShape X_BASE = Block.box(1.0D, 0.0D, 3.0D, 15.0D, 3.0D, 13.0D);
 

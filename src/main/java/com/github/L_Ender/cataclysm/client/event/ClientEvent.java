@@ -384,12 +384,12 @@ public class ClientEvent {
             if (player.isPassenger()) {
                 if (player.getVehicle() instanceof The_Leviathan_Tongue_Entity || player.getVehicle() instanceof IHoldEntity) {
                     if (VanillaGuiLayers.VEHICLE_HEALTH == event.getName()) {
-                        Minecraft.getInstance().gui.setOverlayMessage(Component.translatable("entity.cataclysm.you_cant_escape"), false);
+                        Minecraft.getInstance().gui.setOverlayMessage(Component.translatable("misc.cataclysm.you_cant_escape"), false);
                     }
                 }
                 if (player.getVehicle() instanceof Accretion_Entity) {
                     if (VanillaGuiLayers.VEHICLE_HEALTH == event.getName()) {
-                        Minecraft.getInstance().gui.setOverlayMessage(Component.translatable("entity.cataclysm.accretion_ride"), false);
+                        Minecraft.getInstance().gui.setOverlayMessage(Component.translatable("misc.cataclysm.accretion_ride"), false);
                     }
                 }
             }

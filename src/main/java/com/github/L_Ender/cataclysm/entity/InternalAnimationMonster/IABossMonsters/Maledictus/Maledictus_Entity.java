@@ -138,7 +138,7 @@ public class Maledictus_Entity extends IABoss_monster implements IHoldEntity {
    private static final EntityDataAccessor<Direction> TOMBSTONE_DIRECTION = SynchedEntityData.defineId(Maledictus_Entity.class, EntityDataSerializers.DIRECTION);
 
     private final CMBossInfoServer bossEvent1 = new CMBossInfoServer(this.getDisplayName(), BossEvent.BossBarColor.GREEN,true,9);
-    private final CMBossInfoServer bossEvent2 = new CMBossInfoServer(Component.translatable("entity.cataclysm.rage_meter"), BossEvent.BossBarColor.GREEN,false,10);
+    private final CMBossInfoServer bossEvent2 = new CMBossInfoServer(Component.translatable("misc.cataclysm.rage_meter"), BossEvent.BossBarColor.GREEN,false,10);
 
     public Maledictus_Entity(EntityType entity, Level world) {
         super(entity, world);
