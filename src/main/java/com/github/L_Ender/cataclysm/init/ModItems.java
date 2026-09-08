@@ -500,9 +500,11 @@ public class ModItems {
 
 
     public static final DeferredItem<Item> THE_INCINERATOR = ITEMS.register("the_incinerator",
-            () -> new The_Incinerator(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC).fireResistant()
-                    .attributes(Cataclysm_Weapon.createAttributes( 13.0F, -2.7F,
-                            new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 2.0F, AttributeModifier.Operation.ADD_VALUE)))));
+            () -> new The_Incinerator(new Item.Properties().rarity(Rarity.EPIC).fireResistant()
+                    .component(DataComponents.UNBREAKABLE, new Unbreakable(false))
+                    .attributes(Cataclysm_Weapon.createAttributes( 9.0F, -2.6F,
+                            new AttributeContainer(Attributes.ENTITY_INTERACTION_RANGE, 2.0F, AttributeModifier.Operation.ADD_VALUE),
+                            new AttributeContainer(Attributes.BLOCK_INTERACTION_RANGE, 2.0F, AttributeModifier.Operation.ADD_VALUE)))));
 
     public static final DeferredItem<Item> BELT_OF_BEGINNER = ITEMS.register("belt_of_beginner",
             () -> new CuriosItem(new Item.Properties().stacksTo(1))

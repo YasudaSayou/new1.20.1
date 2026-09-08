@@ -8,27 +8,27 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.List;
 
-public class The_Incinerator extends Cataclysm_Weapon  {
+public class The_Incinerator extends SwordItem  {
 
 
     public The_Incinerator(Properties group) {
-        super(group);
+        super(Tiers.NETHERITE, group);
     }
 
 
@@ -95,32 +95,6 @@ public class The_Incinerator extends Cataclysm_Weapon  {
         return true;
     }
 
-    @Override
-    public boolean isEnchantable(ItemStack stack) {
-        return true;
-    }
-
-    @Override
-    public int getEnchantmentValue() {
-        return 16;
-    }
-
-    public boolean canAttackBlock(BlockState state, Level worldIn, BlockPos pos, Player player) {
-        return !player.isCreative();
-    }
-
-    public float getDestroySpeed(ItemStack p_43288_, BlockState p_43289_) {
-        if (p_43289_.is(Blocks.COBWEB)) {
-            return 15.0F;
-        } else {
-            return p_43289_.is(BlockTags.SWORD_EFFICIENT) ? 1.5F : 1.0F;
-        }
-    }
-
-    public boolean isCorrectToolForDrops(BlockState p_43298_) {
-        return p_43298_.is(Blocks.COBWEB);
-    }
-
     private boolean spawnFlameStrike(double x, double z, double minY, double maxY, float rotation, int duration, int wait, int delay, Level world, float radius, LivingEntity player) {
         BlockPos blockpos = BlockPos.containing(x, maxY, z);
         boolean flag = false;
@@ -151,13 +125,6 @@ public class The_Incinerator extends Cataclysm_Weapon  {
         }
         return false;
     }
-
-    @Override
-    public boolean canPerformAction(ItemStack stack, net.neoforged.neoforge.common.ItemAbility itemAbility) {
-        return net.neoforged.neoforge.common.ItemAbilities.DEFAULT_SWORD_ACTIONS.contains(itemAbility);
-    }
-
- 
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flags) {
